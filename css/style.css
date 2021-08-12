@@ -186,6 +186,8 @@ p.section-description {
   border-radius: 25px;
   padding: 12px 20px;
   color: #fff;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .primary-btn.darken {
@@ -315,7 +317,47 @@ p.section-description {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
+.master-social-link::before,
+.master-social-link::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 200ms linear;
+}
+.master-social-link.inst::before,
+.master-social-link.inst::after {
+  background-image: url(../icons/instagram.svg);
+}
+.master-social-link.twit::before,
+.master-social-link.twit::after {
+  background-image: url(../icons/twitter.svg);
+}
+.master-social-link.fb::before,
+.master-social-link.fb::after {
+  background-image: url(../icons/facebook.svg);
+}
+.master-social-link.li::before,
+.master-social-link.li::after {
+  background-image: url(../icons/linkedin.svg);
+}
+
+.master-social-link:hover::before {
+  transform: translateY(-50px);
+}
+.master-social-link:hover::after {
+  transform: translateY(0px);
+}
+.master-social-link::after {
+  transform: translateY(50px);
+}
+
 .master-social-link:hover svg,
 .master-social-link:focus svg {
   fill: var(--primary-color);
@@ -390,6 +432,54 @@ img {
   line-height: 30px;
   color: var(--text-secondary);
 }
+.footer-form .form-field {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9da4bd60;
+  outline: none;
+}
+
+.footer-form .field-label {
+  position: relative;
+  display: inline-block;
+}
+.footer-form .field-label legend {
+  position: absolute;
+  transition: translate 100ms linear;
+  color: #9da4bd60;
+  top: -3px;
+}
+.footer-form .form-field:focus + legend {
+  transform: translate(-2px, -24px);
+  color: #fff;
+}
+.field-label:hover .form-field,
+.footer-form .form-field:focus {
+  border-color: #fff;
+}
+.field-label:hover legend {
+  color: #fff;
+}
+
+legend {
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+textarea.form-field {
+  width: 100%;
+  display: block;
+  resize: none;
+}
+textarea.form-field::placeholder {
+  color: #fff;
+}
+
 .contacts-box {
   padding-left: 40px;
 }

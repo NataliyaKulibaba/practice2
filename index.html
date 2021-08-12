@@ -177,25 +177,25 @@
           <p>John Smith</p>
           <span>Extreme Barber</span>
           <div class="master-social-box">
-            <a href="" class="master-social-link">
-            <svg>
+            <a href="" class="master-social-link inst">
+            <!-- <svg>
               <use href="./icons/sprite.svg#icon-instagram"></use>
-            </svg>
+            </svg> -->
             </a>
-            <a href="" class="master-social-link">
-              <svg>
+            <a href="" class="master-social-link twit">
+              <!-- <svg>
                 <use href="./icons/sprite.svg#icon-twitter"></use>
-              </svg>
+              </svg> -->
             </a>
-            <a href="" class="master-social-link">
-              <svg>
+            <a href="" class="master-social-link fb">
+              <!-- <svg>
                 <use href="./icons/sprite.svg#icon-facebook"></use>
-              </svg>
+              </svg> -->
             </a>
-            <a href="" class="master-social-link">
-              <svg>
+            <a href="" class="master-social-link li">
+              <!-- <svg>
                 <use href="./icons/sprite.svg#icon-linkedin"></use>
-              </svg>
+              </svg> -->
             </a>
           </div>
         </li>
@@ -204,25 +204,25 @@
           <p>Michele Doe</p>
           <span>Extreme Barber</span>
           <div class="master-social-box">
-            <a href="" class="master-social-link">
-              <svg>
+            <a href="" class="master-social-link inst">
+              <!-- <svg>
                 <use href="./icons/sprite.svg#icon-instagram" ></use>
-              </svg>
+              </svg> -->
             </a>
-            <a href="" class="master-social-link"> 
-              <svg>
+            <a href="" class="master-social-link twit"> 
+              <!-- <svg>
                 <use href="./icons/sprite.svg#icon-twitter"></use>
-              </svg>
+              </svg> -->
             </a>
-            <a href="" class="master-social-link">
-              <svg>
+            <a href="" class="master-social-link fb">
+              <!-- <svg>
                 <use href="./icons/sprite.svg#icon-facebook"></use>
-              </svg>
+              </svg> -->
             </a>
-            <a href="" class="master-social-link">
-              <svg>
+            <a href="" class="master-social-link li">
+              <!-- <svg>
                 <use href="./icons/sprite.svg#icon-linkedin"></use>
-              </svg>
+              </svg> -->
             </a>
             </div>
         </li>
@@ -230,25 +230,25 @@
           <img src="./images/AlanBlack (1).jpg" alt="Alan Black photo">
           <p>Alan Black</p>
           <span>Extreme Barber</span>
-          <div class="master-social-box"><a href="" class="master-social-link">
-            <svg>
+          <div class="master-social-box"><a href="" class="master-social-link inst">
+            <!-- <svg>
               <use href="./icons/sprite.svg#icon-instagram"></use>
-            </svg>
+            </svg> -->
             </a>
-            <a href="" class="master-social-link">
-              <svg>
+            <a href="" class="master-social-link twit">
+              <!-- <svg>
                 <use href="./icons/sprite.svg#icon-twitter"></use>
-              </svg>
+              </svg> -->
             </a>
-            <a href="" class="master-social-link">
-              <svg>
+            <a href="" class="master-social-link fb">
+              <!-- <svg>
                 <use href="./icons/sprite.svg#icon-facebook"></use>
-              </svg>
+              </svg> -->
             </a>
-            <a href="" class="master-social-link">
-              <svg>
+            <a href="" class="master-social-link li">
+              <!-- <svg>
                 <use href="./icons/sprite.svg#icon-linkedin"></use>
-              </svg>
+              </svg> -->
             </a>
           </div>
         </li>
@@ -294,10 +294,25 @@
   <footer class="footer" id="footer">
     <div class="footer-form">
       <h2 class="section-title lighten">Онлайн-запись</h2>
-      <form action="">
-        <input type='submit' class="primary-btn" />
+
+      <form action="#">
+        <label for="userName" class="field-label">
+            <input type='text' name="userName" id="userName" class="form-field" required />
+            <legend>Имя*</legend>
+        </label>
+
+        <label for="userPhone" class="field-label">
+            <input type='tel' name="userPhone"  id="userPhone"class="form-field" required />
+            <legend>Телефон*</legend>
+        </label>
+                            
+        
+        <textarea name="userMessage" class="form-field" cols="30" rows="10" placeholder="Сообщение"></textarea>
+        <button type="submit" class="primary-btn"> Отправить</button>
+       
       </form>
     </div>
+
     <div class="footer-contacts">
       <h2 class="section-title lighten">Контакты</h2>
       <div class="contacts-box">
