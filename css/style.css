@@ -227,6 +227,7 @@ p.section-description {
 }
 .price-box {
   display: flex;
+  margin-bottom: 30px;
 }
 .price-list:nth-child(odd) {
   background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
@@ -285,7 +286,39 @@ p.section-description {
 }
 
 /* Masters styles here */
+.flipper {
+  position: relative;
+  width: 100%;
 
+  transform-style: preserve-3d;
+  transition: 0.7s linear;
+}
+
+.back {
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 20px 20px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.front {
+  z-index: 2;
+}
+.back {
+  transform: rotateY(-180deg);
+  background: #dcb8b2;
+  color: white;
+}
+.back p {
+  padding-top: 15px;
+}
+.master-card:hover .flipper {
+  transform: rotateY(180deg);
+}
 .master-box {
   background: #f7f7f7;
 }
@@ -379,10 +412,15 @@ p.section-description {
 .image-gallery {
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 .gallery-card {
   position: relative;
   overflow: hidden;
+  width: 20%;
+}
+.gallery-card img {
+  width: 100%;
 }
 .gallery-description {
   position: absolute;
@@ -418,51 +456,43 @@ img {
   background-position: right top;
   color: var(--text-secondary);
 }
+.footer-form-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .footer-form,
 .footer-contacts {
   width: 50%;
   height: inherit;
-}
-.footer-contacts {
-  padding: 130px 105px 130px 100px;
-}
-.footer-contacts {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 30px;
-  color: var(--text-secondary);
+  padding: 50px;
 }
 .footer-form .form-field {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #9da4bd60;
   outline: none;
+  margin-bottom: 40px;
+  width: 100%;
+  color: #fff;
 }
-
 .footer-form .field-label {
   position: relative;
   display: inline-block;
+  width: calc(50% - 15px);
 }
+
+.field-label:hover .form-field,
+.footer-form .form-field:focus {
+  border-color: #fff;
+}
+
 .footer-form .field-label legend {
   position: absolute;
   transition: translate 100ms linear;
   color: #9da4bd60;
   top: -3px;
-}
-.footer-form .form-field:focus + legend {
-  transform: translate(-2px, -24px);
-  color: #fff;
-}
-.field-label:hover .form-field,
-.footer-form .form-field:focus {
-  border-color: #fff;
-}
-.field-label:hover legend {
-  color: #fff;
-}
-
-legend {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -471,15 +501,37 @@ legend {
   text-transform: uppercase;
 }
 
+.field-label:hover legend {
+  color: #fff;
+}
+
+.footer-form .form-field:focus + legend {
+  transform: translate(-2px, -24px);
+  color: #fff;
+}
+
 textarea.form-field {
   width: 100%;
   display: block;
   resize: none;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
 }
 textarea.form-field::placeholder {
-  color: #fff;
-}
+  font-family: "Open Sans", sans-serif;
 
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(157, 164, 189, 0.4);
+}
+.footer-contacts {
+  padding: 130px 105px 130px 100px;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--text-secondary);
+}
 .contacts-box {
   padding-left: 40px;
 }
