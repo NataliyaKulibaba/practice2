@@ -1,0 +1,18 @@
+//Base
+@import "./base/normalize";
+
+//Utils
+@import "./utils/variables";
+
+//Components
+@import "./components/headers";
+@import "./components/buttons";
+
+// Layot
+@import "./layout/header";
+@import "./layout/about";
+@import "./layout/why-us";
+@import "./layout/price";
+@import "./layout/masters";
+@import "./layout/gallery";
+@import "./layout/footer";

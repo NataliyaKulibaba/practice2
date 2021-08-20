@@ -1,0 +1,137 @@
+.footer {
+  width: 100%;
+  min-height: 640px;
+  height: auto;
+  background-color: $secondary-color;
+  padding: 0 50px;
+  display: flex;
+  background-image: url(../images/footer/Bg.png);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  background-position: right top;
+  color: $text-secondary;
+}
+.footer-form-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-form,
+.footer-contacts {
+  width: 50%;
+  height: inherit;
+  padding: 50px;
+}
+.footer-form .form-field {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9da4bd60;
+  outline: none;
+  margin-bottom: 40px;
+  width: 100%;
+  color: $primary-color;
+}
+.footer-form .field-label {
+  position: relative;
+  display: inline-block;
+  width: calc(50% - 15px);
+}
+
+.field-label:hover .form-field,
+.footer-form .form-field:focus {
+  border-color: $primary-color;
+}
+
+.footer-form .field-label legend {
+  position: absolute;
+  transition: translate 100ms linear;
+  color: #9da4bd60;
+  top: -3px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.field-label:hover legend {
+  color: #fff;
+}
+
+.footer-form .form-field:focus + legend {
+  transform: translate(-2px, -24px);
+  color: #fff;
+}
+
+textarea.form-field {
+  width: 100%;
+  display: block;
+  resize: none;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+textarea.form-field::placeholder {
+  font-family: "Open Sans", sans-serif;
+
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #9da4bd7c;
+}
+.footer-contacts {
+  padding: 130px 105px 130px 100px;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: $text-secondary;
+}
+.contacts-box {
+  padding-left: 40px;
+}
+.contacts-box > adress {
+  position: relative;
+}
+
+.contacts-box > adress::before,
+.contacts-box > a::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: -41px;
+  top: 3px;
+}
+.contacts-box > adress::before {
+  background-image: url(../icons/map-pin.svg);
+}
+
+.contacts-box > a:nth-last-of-type(1)::before {
+  background-image: url(../icons/phone.svg);
+}
+.contacts-box > a:nth-last-of-type(2)::before {
+  background-image: url(../icons/mail.svg);
+}
+.contacts-box > a {
+  position: relative;
+  display: block;
+  color: $text-secondary;
+}
+
+.copyright {
+  width: 100%;
+  min-height: 125px;
+  height: auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+.footer-contacts {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: $text-secondary;
+}

@@ -1,0 +1,77 @@
+.hero-description {
+  color: $text-primary;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Navbar styles here */
+
+nav.navbar {
+  width: 100%;
+
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  padding: 30px 55px 0 55px;
+  box-sizing: border-box;
+}
+
+.logo-img {
+  width: 68px;
+  height: 56px;
+  fill: $text-primary;
+  animation-name: infiniteRotate;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+}
+
+.nav-holder {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 40px;
+}
+a.nav-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: $primary-color;
+}
+
+a.nav-link:hover,
+.social-link:hover {
+  color: $acent-color;
+}
+
+.slider {
+  width: calc(100% - 155px);
+
+  background-image: linear-gradient(310deg, rgba(0, 0, 0, 0.21), #000000d4),
+    url(/images/Slider.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sidebar {
+  width: 155px;
+  height: 100vh;
+  background-color: $primary-color;
+}

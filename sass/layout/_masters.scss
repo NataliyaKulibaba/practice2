@@ -1,0 +1,121 @@
+.flipper {
+  position: relative;
+  width: 100%;
+
+  transform-style: preserve-3d;
+  transition: 0.7s linear;
+}
+
+.back {
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 20px 20px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.front {
+  z-index: 2;
+}
+.back {
+  transform: rotateY(-180deg);
+  background: #dcb8b2;
+  color: $primary-color;
+}
+.back p {
+  padding-top: 15px;
+}
+.master-card:hover .flipper {
+  transform: rotateY(180deg);
+}
+.master-box {
+  background: #f7f7f7;
+}
+.masters-list {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 300px;
+  text-align: center;
+}
+
+.master-card p {
+  font-size: 18px;
+  line-height: 25px;
+  color: $text-primary;
+}
+
+.master-card span {
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: $acent-color;
+}
+
+.master-social-link {
+  width: 44px;
+  height: 44px;
+  background-color: $primary-color;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.master-social-link::before,
+.master-social-link::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 200ms linear;
+}
+.master-social-link.inst::before,
+.master-social-link.inst::after {
+  background-image: url(../icons/instagram.svg);
+}
+.master-social-link.twit::before,
+.master-social-link.twit::after {
+  background-image: url(../icons/twitter.svg);
+}
+.master-social-link.fb::before,
+.master-social-link.fb::after {
+  background-image: url(../icons/facebook.svg);
+}
+.master-social-link.li::before,
+.master-social-link.li::after {
+  background-image: url(../icons/linkedin.svg);
+}
+
+.master-social-link:hover::before {
+  transform: translateY(-50px);
+}
+.master-social-link:hover::after {
+  transform: translateY(0px);
+}
+.master-social-link::after {
+  transform: translateY(50px);
+}
+
+.master-social-link:hover svg,
+.master-social-link:focus svg {
+  fill: var(--primary-color);
+}
+.master-social-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 90px;
+  margin-top: 30px;
+}
+.master-social-link svg {
+  height: 20px;
+
+  fill: rgba(48, 48, 48, 1);
+}
